@@ -61,7 +61,7 @@ class WeatherListTableViewController: UITableViewController, AddWeatherDelegate 
             let indexPath = self.tableView.indexPathForSelectedRow else{
                 return
         }
-        
+        //
         let weatherVM = self.weatherListViewModel.modelAt(indexPath.row)
         weatherDetailVC.weatherViewModel = weatherVM 
     }
