@@ -15,4 +15,18 @@ class WeatherDetailViewController: UIViewController{
     @IBOutlet weak var currentTempLabel:UILabel!
     @IBOutlet weak var maxTempLabel:UILabel!
     @IBOutlet weak var minTempLabel:UILabel!
+    
+    var weatherViewModel:WeatherViewModel?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        if let weatherVM = self.weatherViewModel{
+        
+        self.cityNameLabel.text = weatherVM.name
+        self.currentTempLabel.text = weatherVM.currentTemperature.temperature.formatAsDegree
+        
+        }
+    }
+    
 }
